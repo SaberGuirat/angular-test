@@ -1,0 +1,66 @@
+<h1 mat-dialog-title>Add User</h1>
+<div mat-dialog-content>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>First Name</mat-label>
+      <input
+        matInput
+        placeholder="First Name"
+        [formControl]="firstName"
+        required
+      />
+      <mat-icon matSuffix
+        ><span class="material-icons-outlined">
+          manage_accounts
+        </span></mat-icon
+      >
+      <mat-error *ngIf="firstName.invalid">{{ getErrorMessage() }}</mat-error>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Last Name </mat-label>
+      <input
+        matInput
+        placeholder="Last Name "
+        [formControl]="lastName"
+        required
+      />
+      <mat-icon matSuffix
+        ><span class="material-icons-outlined">
+          manage_accounts
+        </span></mat-icon
+      >
+      <mat-error *ngIf="lastName.invalid">{{ getErrorMessage() }}</mat-error>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Enter your email</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        [formControl]="email"
+        required
+      />
+      <mat-icon matSuffix>email</mat-icon>
+
+      <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-error *ngIf="errMess">{{ errMess }}</mat-error>
+  </p>
+</div>
+<mat-dialog-actions>
+  <button mat-button (click)="close()">Cancel</button>
+  <button
+    mat-button
+    cdkFocusInitial
+    (click)="addUser()"
+    [disabled]="firstName.invalid || lastName.invalid || email.invalid"
+    color="primary"
+  >
+    Save Changes
+  </button>
+</mat-dialog-actions>
