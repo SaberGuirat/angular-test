@@ -12,6 +12,7 @@
     "client": "cd client && ng serve --open",
     "client-install": "cd client && npm install ",
     "server-install": "npm install ",
+    "preinstall": "npm install -g @angular/cli@9.1.15",
     "heroku-postbuild": "cd client && npm install && ng build --prod --output-path dist/"
   },
   "keywords": [],
