@@ -1,4 +1,4 @@
-This is a MEAN Stack project (https://github.com/SaberGuirat/raccourci_url_project).
+This is a MEAN Stack project (https://github.com/SaberGuirat/angular-test).
 
 
 
@@ -41,4 +41,4 @@ Open(http://localhost:4200) with your browser to see the result.
 
 ## Demo App 
 
-visit (https://test-tech-gs.herokuapp.com) to see the demo app .
+visit (https://test-angular-gs.herokuapp.com) to see the demo app .
